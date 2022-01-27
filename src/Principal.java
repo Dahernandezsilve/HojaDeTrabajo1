@@ -57,6 +57,9 @@ public class Principal {
                 seleccion = s.nextInt();
                 System.out.println(c.cambiarSenal(c.getTipoSenal()));
                 System.out.println("Gran eleccion!");
+                System.out.println("");
+                System.out.println("---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+                System.out.println("");
                 if (seleccion==1){
                     System.out.println("¿Que desea realizar?");
                     System.out.println("[1]. Avanzar en el dial de la Emisora");
