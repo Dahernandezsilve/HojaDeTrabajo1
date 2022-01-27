@@ -2,8 +2,10 @@ import java.util.Scanner;
 
 public class Principal {
     public static void main(String[] args){
+        Controlador c = new Controlador();
         Scanner s = new Scanner(System.in);
-
+        boolean salir = false;
+        int seleccion;
         System.out.println("""
         RRRRRRRRRRRRRRRRR                  AAA               DDDDDDDDDDDDD        IIIIIIIIII     OOOOOOOOO          UUUUUUUU     UUUUUUUUVVVVVVVV           VVVVVVVV        GGGGGGGGGGGGG
         R::::::::::::::::R                A:::A              D::::::::::::DDD     I::::::::I   OO:::::::::OO        U::::::U     U::::::UV::::::V           V::::::V     GGG::::::::::::G
@@ -22,8 +24,43 @@ public class Principal {
         R::::::R     R:::::R A:::::A                 A:::::A D::::::::::::DDD     I::::::::I   OO:::::::::OO            UU:::::::::UU               V:::V                GGG::::::GGG:::G
         RRRRRRRR     RRRRRRRAAAAAAA                   AAAAAAADDDDDDDDDDDDD        IIIIIIIIII     OOOOOOOOO                UUUUUUUUU                  VVV                    GGGGGG   GGGG""");
 
-        System.out.println("¿Que desea escuchar en este momento?");
-        System.out.println("1. Radio AM");
-        System.out.println("2. Radio PM");
+        while (!salir){
+            System.out.println("");
+            System.out.println("---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+            System.out.println("");
+            System.out.println("Seleccione lo que desee realizar :D");
+            System.out.println("[1]. Encender la radio.");
+            System.out.println("[2]. Apagar la radio");
+            seleccion = s.nextInt();
+            if (!c.comprobarEncendida() && seleccion == 2){
+                System.out.println("La radio se encuentra apagada!");
+            } else if (!c.comprobarEncendida() && seleccion == 1){
+                System.out.println("Iniciando sistema.....");
+                System.out.println(".....");
+                System.out.println(".....");
+                System.out.println(".....");
+                System.out.println(".....");
+                System.out.println("¡Radio encendida!");
+                c.encenderApagar();
+            }
+            while (c.comprobarEncendida()){
+                System.out.println("");
+                System.out.println("---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+                System.out.println("");
+                System.out.println("¿Que desea escuchar en este momento?");
+                System.out.println("[1]. Radio AM");
+                System.out.println("[2]. Radio PM");
+                seleccion = s.nextInt();
+                System.out.println("Gran eleccion!");
+                if (seleccion==1){
+                    System.out.println("¿Que desea realizar?");
+                    System.out.println("[1]. Radio AM");
+                    System.out.println("[2]. Radio PM");
+                }
+            }
+
+
+        }
+
     }
 }
