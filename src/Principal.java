@@ -30,6 +30,7 @@ public class Principal {
         RRRRRRRR     RRRRRRRAAAAAAA                   AAAAAAADDDDDDDDDDDDD        IIIIIIIIII     OOOOOOOOO                UUUUUUUUU                  VVV                    GGGGGG   GGGG""");
 
         while (!salir){
+            regresar = false;
             System.out.println("");
             System.out.println("---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
             System.out.println("");
@@ -42,10 +43,6 @@ public class Principal {
                 System.out.println("¡La radio se encuentra apagada!");
             } else if (!c.comprobarEncendida() && seleccion == 1){
                 System.out.println("Iniciando sistema.....");
-                System.out.println(".....");
-                System.out.println(".....");
-                System.out.println(".....");
-                System.out.println(".....");
                 System.out.println("¡Radio encendida!");
                 c.encenderApagar();
                 System.out.println("");
@@ -53,12 +50,11 @@ public class Principal {
                 System.out.println("");
             } else if (c.comprobarEncendida() && seleccion ==2) {
                 System.out.println("Apagando el sistema.....");
-                System.out.println(".....");
-                System.out.println(".....");
-                System.out.println(".....");
-                System.out.println(".....");
                 System.out.println("¡Radio apagada!");
                 c.encenderApagar();
+                System.out.println("");
+                System.out.println("---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+                System.out.println("");
             } else if (c.comprobarEncendida() && seleccion == 1) {
                 System.out.println("¡La radio se encuentra encendida!");
             }
@@ -72,7 +68,7 @@ public class Principal {
                 System.out.println("---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
                 System.out.println("");
             }
-            if (seleccion==1){
+            if (seleccion==1 && c.comprobarEncendida()){
                 while(!regresar){
                 System.out.println("¿Que desea realizar?");
                 System.out.println("[1]. Cambiar estación");
