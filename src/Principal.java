@@ -55,8 +55,13 @@ public class Principal {
                 if (seleccion==1){
                     System.out.println("¿Que desea realizar?");
                     System.out.println("[1]. Radio AM");
-                    System.out.println("[2]. Radio PM");
+                    System.out.println("[2]. Salir");
+                    seleccion = s.nextInt();
+                    if (seleccion ==2){
+                        salir = true;
+                    }
                 }
+
             }
 
 
