@@ -1,3 +1,8 @@
+/**
+ * Clase controladora que permite realizar las acciones para garantizar el funcionamiento de la radio.
+ * @author Diego Alexander Hernández Silvestre
+ * @author Kristopher Javier Alvarado López
+ */
 public class Controlador implements Radio{
 
     private boolean encendido; // Determina el estado de la radio, true (encendido) y false (apagado).

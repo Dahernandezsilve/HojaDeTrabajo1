@@ -1,10 +1,29 @@
-///PRUEBA CONEXIÓN
-// DIEGO HERNÁNDEZ 21270 | JAVIER ALVARADO 21188 .
-
 
 import java.util.Scanner;
 
+/**
+ * Universidad del Valle de Guatemala
+ * Facultad de Ingeniería
+ * Departamento de Ciencia de la Computación.
+ * CC2016 - Algoritmos y estructuras de datos
+ * Sección: 20
+ *
+ * Hoja de trabajo 1
+ *
+ * Entorno: El ejercicio tiene como objetivo, lograr que el usuario
+ * interactue con la simulación de una radio.
+ *
+ *Estudiantes: Diego Alexander Hernández Silvestre | Carné: 21270
+ *             Kristopher Javier Alvarado López | Carné: 21188
+ * @version 1.0
+ * @author Diego Alexander Hernández Silvestre
+ * @author Kristopher Javier Alvarado López
+ */
 public class Principal {
+    /**
+     * Método que permite visualizar e interactuar con el usuario.
+     * @param args Parámetro necesario para establecer comunicación con el usuario y el programa.
+     */
     public static void main(String[] args){
         Controlador c = new Controlador();
         Scanner s = new Scanner(System.in);

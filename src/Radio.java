@@ -1,3 +1,8 @@
+/**
+ * Interfaz que define las acciones para garantizar el funcionamiento de la radio.
+ * @author Diego Alexander Hernández Silvestre
+ * @author Kristopher Javier Alvarado López
+ */
 public interface Radio {
     public void encenderApagar(); // Cambia el estado de encendido/apagado.
     public String guardarEmisoraActual(int numBoton); // Guarda la emisora como favorita en el botón indicado (array de 12 espacios).
