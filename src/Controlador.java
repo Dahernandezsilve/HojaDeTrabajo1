@@ -56,25 +56,36 @@ public class Controlador implements Radio{
 
     @Override
     public void subirEmisora() {
-
         if(this.tipoSenal) {
-            AMactual += 10;
-            this.AMactual = AMactual;
+            if (AMactual==(float) 1610){
+               this.AMactual = (float) 530;
+            } else {
+                AMactual += (float) 10;
+            }
         }else{
-            FMactual += 0.2;
-            this.FMactual = FMactual;
-        }
+            if (FMactual==(float) 107.9){
+                this.FMactual= (float)87.9;
+            } else {
+                FMactual += (float) 0.2;
+            }
 
+        }
     }
 
     @Override
     public void bajarEmisora() {
         if(this.tipoSenal) {
-            AMactual -=10;
-            this.AMactual = AMactual;
+            if (AMactual==(float) 530){
+                this.AMactual=(float) 1610;
+            } else {
+                AMactual -=(float) 10;
+            }
         }else{
-            FMactual -= 0.2;
-            this.FMactual = FMactual;
+            if (FMactual==(float) 87.9){
+                this.FMactual= (float)107.9;
+            } else {
+                FMactual -= (float) 0.2;
+            }
         }
     }
 
@@ -83,9 +94,8 @@ public class Controlador implements Radio{
         if(this.tipoSenal){
             return this.AMactual;
         }else{
-            return FMactual;
+            return this.FMactual;
         }
-
     }
 
     @Override
