@@ -3,14 +3,25 @@
  * @author Diego Alexander Hernández Silvestre
  * @author Kristopher Javier Alvarado López
  */
-public class Controlador implements Radio{
 
-    private boolean encendido; // Determina el estado de la radio, true (encendido) y false (apagado).
-    private boolean tipoSenal; //(True si es AM y False si es FM)
+public class Controlador implements Radio{
+    /**
+     * Se crean las variables que se van a utilizar para el controlador
+     */
+    private boolean encendido;
+    private boolean tipoSenal;
     private float AMactual;
     private float FMactual;
     private String[] emisorasGuardadas = new String[12];
 
+    /**
+     *
+     * @param encendido Determina el estado de la radio, true (encendido) y false (apagado).
+     * @param tipoSenal (True si es AM y False si es FM)
+     * @param AMactual Se guarda el valor de la Emisora AM
+     * @param FMactual Se guarda el valor de la Emisora FM
+     * @param emisorasGuardadas Guarda la lista de las Emisoras que fueron guardadas
+     */
     public Controlador(boolean encendido, boolean tipoSenal, float AMactual, float FMactual, String[] emisorasGuardadas) {
         this.encendido = encendido;
         this.tipoSenal = tipoSenal;
@@ -19,17 +30,28 @@ public class Controlador implements Radio{
         this.emisorasGuardadas = emisorasGuardadas;
     }
 
+    /**
+     * Se crea el constructor Controlador, en donde se asignan los valores de las Emisoras AM y FM
+     */
     public Controlador() {
         this.encendido = false;
         AMactual = (float) 530;
         FMactual = (float) 87.9;
     }
 
+    /**
+     * Se encarga de encender o apagar la Radio
+     */
     @Override
     public void encenderApagar() {
         this.encendido= !this.encendido;
     }
 
+    /**
+     *
+     * @param numBoton El número de boton a guardar la Emisora
+     * @return El listado de las emisoras
+     */
     @Override
     public String guardarEmisoraActual(int numBoton) {
         String listado = "";
@@ -60,6 +82,11 @@ public class Controlador implements Radio{
         }
     }
 
+    /**
+     *
+     * @param numBoton El número de botón a seleccionar
+     * @return La emisora que fue seleccionada
+     */
     @Override
     public String seleccionarEmisoraGuardada(int numBoton) {
         String resultado = "";
@@ -86,6 +113,11 @@ public class Controlador implements Radio{
         return resultado;
     }
 
+    /**
+     *
+     * @param opcion Radio AM o FM
+     * @return Un dato string
+     */
     @Override
     public String cambiarSenal(boolean opcion) {
         this.tipoSenal = !opcion;
@@ -96,11 +128,18 @@ public class Controlador implements Radio{
         }
     }
 
+    /**
+     *
+     * @return Se encarga de obtener el dato tipoSenal
+     */
     @Override
     public boolean getTipoSenal() {
         return this.tipoSenal;
     }
 
+    /**
+     * Se encarga de Subir la Emisora
+     */
     @Override
     public void subirEmisora() {
         if(this.tipoSenal) {
@@ -118,6 +157,9 @@ public class Controlador implements Radio{
         }
     }
 
+    /**
+     * Se encarga de bajar la Emisora
+     */
     @Override
     public void bajarEmisora() {
         if(this.tipoSenal) {
@@ -135,6 +177,10 @@ public class Controlador implements Radio{
         }
     }
 
+    /**
+     *
+     * @return Se encarga de retornar la Emisora AM o FM
+     */
     @Override
     public float getEmisoraActual() {
         if(this.tipoSenal){
@@ -144,6 +190,10 @@ public class Controlador implements Radio{
         }
     }
 
+    /**
+     *
+     * @return Se encarga de retornar encendido
+     */
     @Override
     public boolean comprobarEncendida() {
         return this.encendido;
