@@ -9,6 +9,7 @@ public class Principal {
         Controlador c = new Controlador();
         Scanner s = new Scanner(System.in);
         boolean salir = false;
+        boolean salir2 = false;
         int seleccion;
         System.out.println("""
         RRRRRRRRRRRRRRRRR                  AAA               DDDDDDDDDDDDD        IIIIIIIIII     OOOOOOOOO          UUUUUUUU     UUUUUUUUVVVVVVVV           VVVVVVVV        GGGGGGGGGGGGG
@@ -60,32 +61,42 @@ public class Principal {
                 System.out.println("");
                 System.out.println("---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
                 System.out.println("");
-                if (seleccion==1){
-                    System.out.println("¿Que desea realizar?");
-                    System.out.println("[1]. Avanzar en el dial de la Emisora");
-                    System.out.println("[2]. Cambiar a Radio PM");
-                    System.out.println("[3]. Guardar una emisora");
-                    System.out.println("[4]. Seleccionar la emisora");
-                    System.out.println("[5]. Salir ");
-                    seleccion = s.nextInt();
-                    switch(seleccion){
-                        case 1: System.out.println("Bssppp");
+                while(!salir2){
+                    if (seleccion==1){
+                        System.out.println("¿Que desea realizar?");
+                        System.out.println("[1]. Avanzar en el dial de la Emisora");
+                        System.out.println("[2]. Retroceser en el dial de la Emisora");
+                        System.out.println("[3]. Cambiar a Radio PM");
+                        System.out.println("[4]. Guardar una emisora");
+                        System.out.println("[5]. Seleccionar la emisora");
+                        System.out.println("[6]. Salir ");
+                        seleccion = s.nextInt();
+                        switch(seleccion){
+                            case 1: System.out.println("Bssppp");
                                 System.out.println("Cambiando de señal..");
-
-
-                        case 2:
-
-                        case 3:
-
-                        case 4:
-
-                        case 5: salir = true;
+                                c.subirEmisora();
+                                System.out.println("Su señal ahora es: "+ c.getEmisoraActual());
                                 break;
+
+                            case 2: System.out.println("Bsppppp");
+                                System.out.println("Cambiando de señal...");
+                                c.bajarEmisora();
+                                System.out.println("Su señal ahora es: "+ c.getEmisoraActual());
+                                break;
+
+                            case 3:
+
+                            case 4:
+
+                            case 6: salir2 = true;
+                                break;
+                        }
+
+
+
                     }
-
-
-
                 }
+
 
             }
 
