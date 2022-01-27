@@ -52,7 +52,9 @@ public class Controlador implements Radio{
 
     @Override
     public void subirEmisora() {
-
+        if(getTipoSenal()==true) {
+            System.out.println("jejej");
+        }
     }
 
     @Override
