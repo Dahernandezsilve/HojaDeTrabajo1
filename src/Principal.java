@@ -53,8 +53,9 @@ public class Principal {
                 System.out.println("");
                 System.out.println("¿Que desea escuchar en este momento?");
                 System.out.println("[1]. Radio AM");
-                System.out.println("[2]. Radio PM");
+                System.out.println("[2]. Radio FM");
                 seleccion = s.nextInt();
+                System.out.println(c.cambiarSenal(c.getTipoSenal()));
                 System.out.println("Gran eleccion!");
                 if (seleccion==1){
                     System.out.println("¿Que desea realizar?");

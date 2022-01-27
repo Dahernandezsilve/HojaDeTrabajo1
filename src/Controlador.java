@@ -43,13 +43,18 @@ public class Controlador implements Radio{
     }
 
     @Override
-    public String camiarSenal(boolean opcion) {
-        return null;
+    public String cambiarSenal(boolean opcion) {
+        this.tipoSenal = !opcion;
+        if(this.tipoSenal){
+            return "Ha cambiado a Radio AM";
+        } else {
+            return "Ha cambiado a Radio FM";
+        }
     }
 
     @Override
     public boolean getTipoSenal() {
-        return false;
+        return this.tipoSenal;
     }
 
     @Override
