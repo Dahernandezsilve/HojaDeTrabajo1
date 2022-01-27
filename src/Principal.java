@@ -59,12 +59,29 @@ public class Principal {
                 System.out.println("Gran eleccion!");
                 if (seleccion==1){
                     System.out.println("¿Que desea realizar?");
-                    System.out.println("[1]. Radio AM");
-                    System.out.println("[2]. Salir");
+                    System.out.println("[1]. Avanzar en el dial de la Emisora");
+                    System.out.println("[2]. Cambiar a Radio PM");
+                    System.out.println("[3]. Guardar una emisora");
+                    System.out.println("[4]. Seleccionar la emisora");
+                    System.out.println("[5]. Salir ");
                     seleccion = s.nextInt();
-                    if (seleccion ==2){
-                        salir = true;
+                    switch(seleccion){
+                        case 1: System.out.println("Bssppp");
+                                System.out.println("Cambiando de señal..");
+
+
+                        case 2:
+
+                        case 3:
+
+                        case 4:
+
+                        case 5: salir = true;
+                                break;
                     }
+
+
+
                 }
 
             }

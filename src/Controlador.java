@@ -18,18 +18,11 @@ public class Controlador implements Radio{
 
     public Controlador() {
         this.encendido = false;
-        this.tipoSenal = false;
-        this.AMactual = 0;
-        this.FMactual = 0;
     }
 
     @Override
     public void encenderApagar() {
-        if (this.encendido){
-            this.encendido=false;
-        } else {
-            this.encendido=true;
-        }
+        this.encendido= !this.encendido;
     }
 
     @Override
