@@ -9,7 +9,7 @@ public class Principal {
         Controlador c = new Controlador();
         Scanner s = new Scanner(System.in);
         boolean salir = false;
-        boolean regresar = false;
+        boolean regresar;
         int seleccion;
         int numBoton;
 
@@ -129,8 +129,16 @@ public class Principal {
                             System.out.println("");
                         }
                         break;
-
                     case 5:
+                        System.out.println("*********************************************");
+                        System.out.println("¿Que número de botón desea seleccionar?");
+                        System.out.println("[1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12]");
+                        numBoton = s.nextInt();
+                        System.out.println(c.seleccionarEmisoraGuardada(numBoton));
+                        System.out.println("*********************************************");
+                        System.out.println("");
+                        System.out.println("---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println("");
                         break;
                     case 6:
                         regresar = true;
