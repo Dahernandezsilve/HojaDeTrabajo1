@@ -11,6 +11,8 @@ public class Principal {
         boolean salir = false;
         boolean regresar = false;
         int seleccion;
+        int numBoton;
+
         System.out.println("""
         RRRRRRRRRRRRRRRRR                  AAA               DDDDDDDDDDDDD        IIIIIIIIII     OOOOOOOOO          UUUUUUUU     UUUUUUUUVVVVVVVV           VVVVVVVV        GGGGGGGGGGGGG
         R::::::::::::::::R                A:::A              D::::::::::::DDD     I::::::::I   OO:::::::::OO        U::::::U     U::::::UV::::::V           V::::::V     GGG::::::::::::G
@@ -110,8 +112,24 @@ public class Principal {
                         System.out.println("---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
                         System.out.println("");
                         break;
+
                     case 4:
+                        System.out.println("*********************************************");
+                        System.out.println("La emisora actual: "+c.getEmisoraActual() + " se guardará");
+                        System.out.println("¿Que número de botón desea guardarla?");
+                        System.out.println("[1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12]");
+                        numBoton = s.nextInt();
+                        if(numBoton>12||numBoton<1){
+                            System.out.println("¡Ese botón no existe!");
+                        }else{
+                            System.out.println(c.guardarEmisoraActual(numBoton));
+                            System.out.println("*********************************************");
+                            System.out.println("");
+                            System.out.println("---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+                            System.out.println("");
+                        }
                         break;
+
                     case 5:
                         break;
                     case 6:

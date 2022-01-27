@@ -31,7 +31,44 @@ public class Controlador implements Radio{
 
     @Override
     public String guardarEmisoraActual(int numBoton) {
-        return null;
+
+        String listado = "";
+        int contador = 0;
+
+        if(tipoSenal){
+
+            emisorasGuardadas[numBoton-1] = Float.toString(AMactual);
+
+            for(int i=0;i<emisorasGuardadas.length;i++){
+
+                    contador +=1;
+                    if(emisorasGuardadas[i]==null){
+                        listado += "["+contador+"] ESPACIO VACIO\n";
+                    }else{
+                        listado += "["+contador+"] "+emisorasGuardadas[i]+ "\n";
+                    }
+
+            }
+
+            return listado;
+        }else {
+            emisorasGuardadas[numBoton-1] = Float.toString(FMactual);
+
+            for(int i=0;i<emisorasGuardadas.length;i++){
+
+                contador +=1;
+                if(emisorasGuardadas[i]==null){
+                    listado += "["+contador+"] ESPACIO VACIO\n";
+                }else{
+                    listado += "["+contador+"] "+emisorasGuardadas[i]+ "\n";
+                }
+
+            }
+
+            return listado;
+        }
+
+
     }
 
     @Override
