@@ -1,3 +1,7 @@
+///PRUEBA CONEXIÓN
+// DIEGO HERNÁNDEZ 21270 | JAVIER ALVARADO 21188
+
+
 import java.util.Scanner;
 
 public class Principal {
