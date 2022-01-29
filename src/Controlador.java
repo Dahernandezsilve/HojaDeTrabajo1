@@ -15,7 +15,7 @@ public class Controlador implements Radio{
     private String[] emisorasGuardadas = new String[12];
 
     /**
-     *
+     * Clase constructora que define la estructura del controlador.
      * @param encendido Determina el estado de la radio, true (encendido) y false (apagado).
      * @param tipoSenal (True si es AM y False si es FM)
      * @param AMactual Se guarda el valor de la Emisora AM
@@ -45,10 +45,11 @@ public class Controlador implements Radio{
     @Override
     public void encenderApagar() {
         this.encendido= !this.encendido;
+        return;
     }
 
     /**
-     *
+     * Método que sirve para guardar la emisora actual.
      * @param numBoton El número de boton a guardar la Emisora
      * @return El listado de las emisoras
      */
@@ -83,7 +84,7 @@ public class Controlador implements Radio{
     }
 
     /**
-     *
+     * Método que sirve para seleccionar la emisora actual en un botón.
      * @param numBoton El número de botón a seleccionar
      * @return La emisora que fue seleccionada
      */
@@ -114,7 +115,7 @@ public class Controlador implements Radio{
     }
 
     /**
-     *
+     * Método que sirve para cambiar la señal de la radio.
      * @param opcion Radio AM o FM
      * @return Un dato string
      */
@@ -129,7 +130,7 @@ public class Controlador implements Radio{
     }
 
     /**
-     *
+     * Método que sirve para obtener el tipo de señal actual.
      * @return Se encarga de obtener el dato tipoSenal
      */
     @Override
@@ -178,7 +179,7 @@ public class Controlador implements Radio{
     }
 
     /**
-     *
+     * Método que sirve para obtener la emisora actual de la radio.
      * @return Se encarga de retornar la Emisora AM o FM
      */
     @Override
@@ -191,7 +192,7 @@ public class Controlador implements Radio{
     }
 
     /**
-     *
+     * Método que sirve para comprobar si la radio se encuentra encendida.
      * @return Se encarga de retornar encendido
      */
     @Override
