@@ -47,7 +47,7 @@ class ControladorTest {
     @org.junit.jupiter.api.Test
     void getEmisoraActual() {
         float resultado = c.getEmisoraActual();
-        float esperado = (float) 87.9;
+        float esperado = (float) 88.9;
         assertEquals(esperado, resultado);
     }
 
